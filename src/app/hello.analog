@@ -1,0 +1,28 @@
+<script lang="ts">
+  // counter.analog
+  import { signal } from '@angular/core';
+
+  const count = signal(0);
+
+  function add() {
+    count.set(count() + 1);
+  }
+</script>
+
+<template>
+  <h2>
+    Hello Angular from Analog SFC
+  </h2>
+
+  <p>
+    {{count()}}
+  </p>
+
+  <button (click)="add()">Increment</button>
+</template>
+
+<style>
+  h2 {
+    color: blue;
+  }
+</style>
